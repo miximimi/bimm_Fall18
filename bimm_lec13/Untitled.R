@@ -1,6 +1,6 @@
 #### class 13
 
-#read a pdb, and separate the useful protein and ligand
+#read a pdb, and separate the useful protein and ligand for future
 
 library('bio3d')
 file.name <- get.pdb('1hsg')
@@ -11,3 +11,5 @@ lig <- trim.pdb(hiv, "ligand")
 
 write.pdb(prot, file="1hsg_protein.pdb")
 write.pdb(lig, file="1hsg_ligand.pdb")
+
+
