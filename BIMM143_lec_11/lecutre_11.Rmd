@@ -1,0 +1,45 @@
+---
+title: "Structual bioinformatics"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## GitHub Documents
+put tabel into R
+```{r}
+pdbstats <- read.csv("Data Export Summary.csv",row.names = 1)
+library(knitr)
+kable(pdbstats)
+```
+
+
+percentage X-ray structures that are protein
+```{r}
+#csv_protein$Proteins[1]/sum(csv_protein[1,])
+```
+Q1 percentage structures soslved by NMR structures and x-ray
+```{r}
+csv_protein$Proteins[2]/sum(csv_protein[2,])
+```
+percentage sreucture solved by NMR
+```{r}
+nstr <- sum(csv_protein$Total)
+
+percentage <- round(csv_protein$Total*100 / nstr,2)
+percentage
+#csv_protein[]/sum(csv_protein$Proteins)
+
+```
+A1: there are `r percent[1]` X-ray structures and 
+
+?????pdb the first is not N: they are all CA
+
+```{r}
+
+
+
+```
+
